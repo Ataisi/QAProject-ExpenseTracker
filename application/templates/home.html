@@ -1,19 +1,18 @@
-{%extends 'base.html'%}
-{% block content %}
-    <h1>{% block title %} Expense Tracker {% endblock %}</h1>
-    <strong><em>“Beware of little expenses; a small leak will sink a great ship.” ― Benjamin Franklin</em></strong>
-    <br>
+{% extends 'base.html' %}
 
+{% block title %} {% endblock %}
 
+{% block content %} 
 
-    <h1> What would you like to do?</h1>
+h1> What would you like to do?</h1>
     <form>
         
         <div class="form-group row">
           <div class="offset-4 col-8">
-                        <a href="{{url_for('addexpense')}}" class="btn btn-primary">Add Expense</a>
-            <a href="{{url_for('viewexpense')}}"  class="btn btn-primary">View Expense</a>
+                        <a href="{{url_for('add_expense')}}" class="btn btn-primary">Add Expense</a>
+            <a href="{{url_for('view_expense')}}"  class="btn btn-primary">View Expense</a>
           </div>
         </div>
       </form>
+
 {% endblock %}
