@@ -1,0 +1,80 @@
+<<<<<<< HEAD
+{% extends 'base.html' %}
+
+=======
+>>>>>>> db7ca7862b2bf56a054f0454c7c146510f4a22ad
+{% block title %} {% endblock %}
+
+{% block content %} 
+
+<table class="table table-hover table-dark">
+<<<<<<< HEAD
+
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Unit Price </th>
+            <th>Amount</th>
+            <th>Action</th> 
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for no, expense in data %}
+        <tr>
+            <td>{{expense.purchased_date}}</td>
+            <td>{{expense.item}}</td>
+            <td>{{expense.description}}</td>
+            <td>{{expense.category_name}}</td>
+            <td>{{expense.quantity}}</td>
+            <td>{{expense.unit_price}}</td>
+            <td>{{amount}}</td>
+            <td> 
+                <a href="" class="btn btn-warning btn-xs" data-toggle="modal">Edit</a>
+                <a href="" class="btn btn-danger btn-xs" onclick="return confirm('Delete Entry ?')" >Delete</a>
+            </td>  
+        </tr>
+        {% endfor %}
+    </tbody>
+=======
+    
+    <tr>
+        <th>Date</th>
+        <th>Item</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Quantity</th>
+        <th>Unit Price (£)</th>
+        <th>Amount</th>
+        <th>Action</th>
+    </tr>
+
+    <tr>
+        <td>Testing</td>
+        <td>Testing</td>
+        <td>Testing</td>
+        <td>Testing</td>
+        <td>Testing</td>
+        <td>Testing</td>
+        <td>Testing</td>
+        <td>
+            <a href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#edit_expense">Edit</a>
+            <a href="" class="btn btn-danger btn-xs" onclick="return confirm('Delete Entry ?')" >Delete</a>
+        </td>
+
+    </tr>
+>>>>>>> db7ca7862b2bf56a054f0454c7c146510f4a22ad
+
+
+</table>
+
+<<<<<<< HEAD
+{% endblock %} 
+
+=======
+{% endblock %}
+>>>>>>> db7ca7862b2bf56a054f0454c7c146510f4a22ad
