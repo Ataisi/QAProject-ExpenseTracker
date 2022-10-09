@@ -1,52 +1,50 @@
 <form action="" method="POST">
-
+    <br>
     <div class="form-group">
-        <label>Date:</label>
+        
+        <label>Date</label>
         <input type="date" class="form-control" name="purchased_date" placeholder="YYYY-MM-DD" required="1">
 
-    </div>
-
-    <div class="form-group">
+    </div><br>
+    
+    <br><div class="form-group">
         <label>Item</label>
         <input type="text" class="form-control" name="item" placeholder="Item purchased" required="1">
-    </div>
+    </div><br>
 
-    <div class="form-group">
+    <br><div class="form-group">
         <label>Description</label>
         <input type="text" class="form-control" name="description" placeholder="Description" required="1">
-    </div>
+    </div><br>
 
-    <div class="form-group">
+    <br><div class="form-group">
         <label>Category</label>
         <input type="text" class="form-control" name="category" placeholder="Category" required="1">
-    </div>
+    </div><br>
 
 
-    <div class="form-group">
+    <br><div class="form-group">
         <label>Quantity</label>
-<<<<<<< HEAD
         <input type="number" min="0" step="1"class="form-control" name="quantity" placeholder="quantity" required="1">
-=======
-        <input type="Integer" class="form-control" name="quantity" placeholder="Quantity" required="1">
->>>>>>> db7ca7862b2bf56a054f0454c7c146510f4a22ad
-    </div>
+    </div><br>
 
-    <div class="form-group">
+    <br><div class="form-group">
         <label >Unit price {£}</label>
         <input type="number" min="0" step="0.01" data-number-to-fixed="2" class="form-control" name="unit_price" placeholder="£0.00" required="1">
-    </div>
+    </div><br>
 
-    <div class="form-group">
-<<<<<<< HEAD
+    <br><div class="form-group">
         <label >Amount {£}</label>
-=======
-        <label >Amount</label>
->>>>>>> db7ca7862b2bf56a054f0454c7c146510f4a22ad
         <input type="number" min="0" step="0.01" data-number-to-fixed="2" class="form-control" name="amount" placeholder="£0.00" required="1">
-    </div>
+    </div><br>
 
-    <div class="form-group">
+    <br><div class="form-group">
         <button class="btn btn-primary" type="submit"> Add Entry</button>
 
-    </div>
+    </div><br>
+
+    <br><div class="form-group">
+        <a class="btn btn-primary" type="button" href="{{url_for('view_expense')}}" role="button">View Expense</a>
+
+    </div><br>
 </form>
