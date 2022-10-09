@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from unicodedata import category
 from application import app
 from flask import render_template, request, url_for, redirect
@@ -6,16 +5,11 @@ from datetime import date
 from application import db
 
 from application.models import Expenses, Category
-=======
-from application import app
-from flask import render_template, request, url_for, redirect
->>>>>>> db7ca7862b2bf56a054f0454c7c146510f4a22ad
 
 @app.route('/')
 def home_page():
     return render_template('home.html')
 
-<<<<<<< HEAD
 
 
 
@@ -65,13 +59,4 @@ def test():
     # Category.query.all()
     return "<h1>done!<h1>"
 
-=======
-@app.route('/addexpense')
-def add_expense():
-    return render_template('addexpense.html')
-
-@app.route('/viewexpense')
-def view_expense():
-    return render_template('viewexpense.html')
->>>>>>> db7ca7862b2bf56a054f0454c7c146510f4a22ad
 
