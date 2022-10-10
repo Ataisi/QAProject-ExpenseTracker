@@ -1,7 +1,10 @@
-FROM python:3.10-slim-buster
-ADD . /QAProject-ExpenseTracker
-WORKDIR /QAProject-ExpenseTracker
-COPY .  .
-RUN pip install flask
+FROM python:3.8-slim-buster 
+WORKDIR /app 
+COPY requirements.txt . 
+COPY . . 
+RUN pip install Flask 
+RUN pip install -r requirements.txt 
+EXPOSE 5000 
+ENTRYPOINT ["python", "app.py"]
 
-CMD [ "python", "app.py" ]
+
