@@ -65,7 +65,13 @@ def update(id):
    
      return render_template('update.html', expense = expense)
 
-
+@app.route('/delete/<int:id>', methods=['GET', 'POST'])
+def delete(id):
+    exp = Expenses.query.filter_by(id=id).first()
+    if exp:
+        db.session.delete(exp)
+        db.session.commit()
+        return redirect('/viewexpense')
     
     
 
