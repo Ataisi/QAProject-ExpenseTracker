@@ -22,21 +22,22 @@
     <tbody>
         {% for no, expense in data %}
         <tr>
-            <td>{{expense.purchased_date}}</td>
+            <td>{{no}}</td>
+            <td>{{expense.purchase_date}}</td>
             <td>{{expense.item}}</td>
             <td>{{expense.description}}</td>
-            <td>{{expense.category_name}}</td>
+            <td>{{expense.category}}</td>
             <td>{{expense.quantity}}</td>
             <td>{{expense.unit_price}}</td>
-            <td>{{amount}}</td>
+            <td>{{expense.amount}}</td>
             <td> 
-                <a href="" class="btn btn-warning btn-xs" data-toggle="modal">Edit</a>
-                <a href="delete/{{expense.id}}" class="btn btn-danger btn-xs" onclick="return confirm('Delete Entry ?')" >Delete</a>
+                <a href="update/{{expense.id}}" class="btn btn-warning btn-xs" onclick="return confirm('Update Expense? ')" >Edit</a>
+                <a href="delete/{{expense.id}}" class="btn btn-danger btn-xs" onclick="return confirm('Delete Expense ?')" >Delete</a>
             </td>  
         </tr>
         {% endfor %}
     </tbody>
-
+    
 
 </table>
 

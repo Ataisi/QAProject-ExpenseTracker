@@ -33,7 +33,7 @@ def add_expense():
         new_expense = Expenses(purchase_date=purchase_date, item=item, description=description, category_id = category_name, quantity=quantity, unit_price=unit_price, amount=amount)
         db.session.add(new_expense)
         db.session.commit()
-        return render_template('/addexpense.html')   #clear page for new entry
+        return render_template('/addexpense.html')   
 
 # view expenses
 @app.route('/viewexpense')
@@ -41,7 +41,7 @@ def view_expense():
     display_expenses = Expenses.query.all()
     return render_template('viewexpense.html', data=enumerate(display_expenses,1))
 
-# # add expenses test
+# 
 # @app.route('/update/<int:id>', methods=['GET', 'POST'])
 # def update():
 #     if request.method == 'GET':
@@ -51,31 +51,37 @@ def view_expense():
 #             return render_template('update.html', expense=exp)
 #         else:
 #             return abort(404)
-   
-#  # method to add a new expense entry
-#     if request.method == 'POST':
-#         purchase_date = request.form['purchased_date']
-#         item = request.form['item']
-#         description = request.form['description']
-#         category_name = request.form['category']
-#         quantity = request.form['quantity']
-#         unit_price = request.form['unit_price']
-#         amount = request.form['amount']
+@app.route('/update/<int:id>', methods=['GET', 'POST'])
+def update(id):
+     expense = Expenses.query.filter_by(id=id).first()
+     if request.method == 'POST':
+        if expense:
+            db.session.delete(expense)
+            db.session.commit()
 
-#         new_expense = Expenses(purchase_date=purchase_date, item=item, description=description, category_id = category_name, quantity=quantity, unit_price=unit_price, amount=amount)
-#         db.session.add(new_expense)
-#         db.session.commit()
-#         return render_template('/viewexpense')   #clear page for new entry
+            purchase_date = request.form['purchase_date']
+            item = request.form['item']
+            description = request.form['description']
+            category_name = request.form['category']
+            quantity = request.form['quantity']
+            unit_price = request.form['unit_price']
+            amount = request.form['amount']
+
+            expense = Expenses(purchase_date=purchase_date, item=item, description=description, category_id = category_name, quantity=quantity, unit_price=unit_price, amount=amount)
+            db.session.add(expense)
+            db.session.commit()
+            return redirect("/viewexpense")
+   
+     return render_template('update.html', expense = expense)
 
 @app.route('/delete/<int:id>', methods=['GET', 'POST'])
 def delete(id):
     exp = Expenses.query.filter_by(id=id).first()
-    #if request.method=='POST':
     if exp:
         db.session.delete(exp)
         db.session.commit()
         return redirect('/viewexpense')
     
-    return redirect("/")
+    
 
 
