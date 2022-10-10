@@ -49,8 +49,8 @@ create a virtual ennvironment
 
 The application has two tables: Expenses and Categories with a one-many relationship
 
-ERD Diagram
-https://github.com/Ataisi/QAProject-ExpenseTracker/blob/main/application/static/images/Picture1.png>
+![ERD Diagram](application\static\images\Picture4.jpeg)
+
 
 
 ###  create the application file structure and initialize a GitHub repository.
