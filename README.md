@@ -40,9 +40,9 @@ create a virtual ennvironment
 # Roadmap
 #### Define app requirements and prioritisation, tracking in jira in Jira
 
-! [Jira board during development](application\static\images\Picture1.png)
+![Jira board during development](application\static\images\Picture1.png)
 
-! [2](application\static\images\Picture3.png)
+![2](application\static\images\Picture3.png)
 
 
 ### Database Design
@@ -50,6 +50,7 @@ create a virtual ennvironment
 The application has two tables: Expenses and Categories with a one-many relationship
 
 ![ERD Diagram](application\static\images\Picture4.jpeg)
+
 
 
 ###  create the application file structure and initialize a GitHub repository.
