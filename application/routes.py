@@ -41,16 +41,7 @@ def view_expense():
     display_expenses = Expenses.query.all()
     return render_template('viewexpense.html', data=enumerate(display_expenses,1))
 
-# 
-# @app.route('/update/<int:id>', methods=['GET', 'POST'])
-# def update():
-#     if request.method == 'GET':
-#         exp = Expenses.query.filter_by(id=id).first()
-#         #if request.method=='POST':
-#         if exp:
-#             return render_template('update.html', expense=exp)
-#         else:
-#             return abort(404)
+
 @app.route('/update/<int:id>', methods=['GET', 'POST'])
 def update(id):
      expense = Expenses.query.filter_by(id=id).first()
