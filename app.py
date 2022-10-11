@@ -1,5 +1,5 @@
 from application import app
-
+## this is 
 if __name__ == "__main__":
     print("here")
     # db.create_all()
