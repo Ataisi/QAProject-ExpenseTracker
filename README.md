@@ -106,7 +106,8 @@ The following were identified as potential risk factors and  mitigation put in p
 
 
 # Future Improvements
-- Add search functionality and option to filter by category and date
+- Add search functionality and option
+- Filter by category and date
 - Add the functionality to display expenses graphically
 
 
