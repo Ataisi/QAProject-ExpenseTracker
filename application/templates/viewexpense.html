@@ -4,7 +4,14 @@
 
 {% block content %} 
 
+<div 
+    class="d-grid gap-3 col-2 ">
+    <a class="btn btn-danger" type="button" href="{{url_for('add_expense')}}" role="button">Add Expense</a>
+    
+</div><hr>
+
 <table class="table table-hover table-dark">
+
 
     <thead>
         <tr>
@@ -22,7 +29,7 @@
     <tbody>
         {% for no, expense in data %}
         <tr>
-            <td>{{no}}</td>
+            
             <td>{{expense.purchase_date}}</td>
             <td>{{expense.item}}</td>
             <td>{{expense.description}}</td>
@@ -35,11 +42,21 @@
                 <a href="delete/{{expense.id}}" class="btn btn-danger btn-xs" onclick="return confirm('Delete Expense ?')" >Delete</a>
             </td>  
         </tr>
+
+        <p>
+        
+        
+        
         {% endfor %}
     </tbody>
     
 
-</table>
+</table><hr>
+
+<div 
+    class="d-grid gap-3 col-1 ">
+    <a class="btn btn-secondary"  type="button" href="{{url_for('home_page')}}" role="button">Home Page</a>
+</div>
 
 {% endblock %} 
 

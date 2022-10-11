@@ -12,7 +12,7 @@ class Expenses (db.Model):
     purchase_date = db.Column(db.String(12), nullable = False)
     item = db.Column(db.String(50), nullable=False)
     description = db.Column(db.String(100), nullable=False)
-    #category_name = db.Column(db.String(50), nullable=False)
+    #category_name = db.Column(db.String(50), nullable=True)
     quantity = db.Column(db.Integer, nullable = False)
     unit_price = db.Column(db.Float, nullable = True)
     amount = db.Column(db.Float, nullable = True)
