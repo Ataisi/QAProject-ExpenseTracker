@@ -40,7 +40,8 @@ create a virtual ennvironment
 # Roadmap
 #### Define app requirements and prioritisation, tracking in jira in Jira
 
-![Jira board during development](application\static\images\Picture1.png)
+![Picture1](https://user-images.githubusercontent.com/82120833/194843902-a29d3748-45d9-40a4-a5ca-d1352383c209.png)
+
 
 ![2](application\static\images\Picture3.png)
 
