@@ -4,38 +4,53 @@
 
 
 # Description
-Expense Tracker is an application to track and monitor household expenses. 
+Expense Tracker is a Flask web application to keep track of all household expenses.  
+
+![](https://github.com/Ataisi/QAProject-ExpenseTracker/blob/main/application/static/images/home.png)
+
 
 ### Main feature of the application:
-- Input items.
+- Input Expenses.
 - View expenses 
 - Update expenses
 - Delete entry
 
 
-The application is Flask web application that serves both the frontend and backend of the application. The application will be hosted in containers and  deployed to Docker Swarm.
+## Objective
+- The objective of this project to develop an application that integrates with a data base and demonstrates CRUD functionality. 
+- Utilize containers to host and deploy the application.
+- Create a continuous integration(CI/) and continuous deployment(CD) pipeline that will automatically test, build and deploy the application.
 
-
-## Technologies
-- Databases:(MySQL/SQLAlchemy)
-- Programming language: Python (Flask)
+## Key Modules Used
+This application is developed using Python 3.9.1 and the Database used is SQLite
+- Flask - web framework
+- Jinja2 - Templating engine
 - Continuous Integration: Jenkins
-- Continuous Deployment: Docker Swarm
-- Version Control: GIT
+- Continuous Deployment: Docker 
+- Version Control: GIT.
+
+A full list of the required installation dependencies is in the requirement.txt file.
 
 
 # Setup
 
 # Installation
-The folowing is required to run the application.
+`Python 3.7 or above` is required to run the application.
 
-`Python 3.7 or above`
+Clone this repository to get the source code
+`git clone https://github.com/Ataisi/QAProject-ExpenseTracker`
+
 
 create a virtual ennvironment
 `python3 -m venv venv`
 
+Activate the virtual environment
+`python3 -m venv venv`
+
 `Run`
-`pip install -r requirements.txt` to install  all athe application dependecies
+`pip install -r requirements.txt` to install  all the application dependecies
+
+`Run`
 
 # Roadmap
 #### Define app requirements and prioritisation, tracking in jira in Jira
