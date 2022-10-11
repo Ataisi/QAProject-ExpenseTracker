@@ -2,7 +2,7 @@
 
 # Overview
 
-###########
+########### ################
 # Description
 Expense Tracker is a Flask web application to keep track of all household expenses.  
 
